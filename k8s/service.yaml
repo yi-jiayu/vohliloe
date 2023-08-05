@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vohliloe
+spec:
+  selector:
+    app: vohliloe
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080

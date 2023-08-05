@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vohliloe
+  labels:
+    app: vohliloe
+spec:
+  selector:
+    matchLabels:
+      app: vohliloe
+  template:
+    metadata:
+      labels:
+        app: vohliloe
+    spec:
+      containers:
+        - name: web
+          image: asia-southeast1-docker.pkg.dev/primal-sunup-394912/sandbox/vohliloe@sha256:ab77a518a541c87d308357b5537399a273f83ed6555b300f52879510bdb86c55
+          ports:
+            - containerPort: 8080
